@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Repaso.Vistas.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="BIENVENIDO" />
+            <Label x:Name="lblUsuario" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="NOMBRE" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="txtNombre" Placeholder="Nombre" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Precio" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txtPrecio" Keyboard="Numeric" Placeholder="PRECIO" Grid.Row="1" Grid.Column="0"/>
+
+                <Label Text="CANTIDAD" Grid.Row="2" Grid.Column="0"/>
+                <Entry x:Name="txtCantidad" Placeholder="CANTIDAD" Keyboard="Numeric" Grid.Row="2" Grid.Column="1"/>
+
+            </Grid>
+
+            <Button x:Name="btnCalcular" Text="CALCULAR" Clicked="btnCalcular_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
